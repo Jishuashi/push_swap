@@ -1,0 +1,6 @@
+push_swap
+push_swap.a
+.vscode
+a.out
+*.o
+*:Zone.Identifier
