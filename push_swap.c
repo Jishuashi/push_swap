@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/12 18:02:52 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/13 14:01:51 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 int	main(int ac, char *av[])
 {
-	int	*a;
-	int	*b;
+	long long	*a;
+	long long	*b;
 
-	ft_printf("%s\n", av[1]);
-
-	(void)a;
+	a = NULL;
 	(void)b;
 	if (!check_args(ac, av))
 	{
 		write(2, "Error\n", 7);
 		return (1);
 	}
+	get_args_array(a, ac, av);
 }

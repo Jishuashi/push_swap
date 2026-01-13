@@ -4,7 +4,7 @@ LIBFT = libft
 
 MAIN = push_swap.c
 
-SRCS_PS = check_args.c create_tab_idx.c
+SRCS_PS = check_args.c create_tab_idx.c get_args_array.c
 
 OBJ_PS = $(SRCS_PS:%.c=%.o)
 
