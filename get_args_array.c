@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 15:54:09 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 16:13:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 static long	*put_in_tab(long *tab, char *str);
 static int	is_double(long	*tab, int nb_nb);
+static void	free_all(char **tab, int len);
 
 long	*get_args_array(long *tab, char *str)
 {
@@ -35,6 +36,7 @@ long	*get_args_array(long *tab, char *str)
 		if (tab[i] > 2147483647 || tab[i] < -2147483648
 			|| is_double(tab, nb_nb))
 		{
+			free(tab);
 			write(2, "Error\n", 7);
 			exit(0);
 		}
@@ -57,6 +59,7 @@ static long	*put_in_tab(long *tab, char *str)
 		tab[i] = ft_atoi_long(to_parsed[i]);
 		i++;
 	}
+	free_all(to_parsed, nb_nb);
 	return (tab);
 }
 
@@ -81,4 +84,17 @@ static int	is_double(long	*tab, int nb_nb)
 		j++;
 	}
 	return (0);
+}
+
+static void	free_all(char **tab, int len)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }
