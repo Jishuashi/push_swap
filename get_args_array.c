@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 15:50:04 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:54:09 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ long	*get_args_array(long *tab, char *str)
 	nb_nb = ft_count_nb(str);
 	tab = (long *)malloc(sizeof(long) * nb_nb);
 	if (!tab)
-		return (NULL);
+	{
+		write(2, "Error\n", 7);
+		exit(0);
+	}
 	tab = put_in_tab(tab, str);
 	i = 0;
 	while (i < nb_nb)
