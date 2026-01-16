@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 14:12:56 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/08 13:13:11 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:35:10 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,7 @@ static	size_t	ft_print_arg(va_list arg, char type)
 		return (ft_print_hex((unsigned int)va_arg(arg, unsigned int), 0));
 	else if (type == 'p')
 		return (ft_print_addr((void *)va_arg(arg, void *)));
+	else if (type == 'l')
+		return (ft_putnbr_long((long)va_arg(arg, long)));
 	return (0);
 }

@@ -1,24 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 15:38:23 by hchartie         ###   ########.fr       */
+/*   Created: 2026/01/16 15:17:40 by hchartie          #+#    #+#             */
+/*   Updated: 2026/01/16 15:18:09 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "./libft/libft.h"
+long	ft_atoi_long(const char *str)
+{
+	long	i;
+	long	res;
+	long	sign;
 
-int		check_args(int ac, char *av[]);
-size_t	*create_tab_idx(size_t i, size_t j);
-long	*get_args_array(long *tab, char *str);
-long	ft_atoi_long(const char *str);
-char	*ft_get_str_nbr(int ac, char *av[]);
-int		ft_count_nb(char *str);
-
-#endif
+	i = 0;
+	res = 0;
+	sign = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
+	return (res * sign);
+}

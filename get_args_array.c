@@ -6,72 +6,76 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/13 14:34:09 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:50:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
-static int			count_nb(int ac, char *av[]);
-static long long	*put_in_tab(long long *tab, int ac, char *av[]);
+static long	*put_in_tab(long *tab, char *str);
+static int	is_double(long	*tab, int nb_nb);
 
-int	*get_args_array(long long *tab, int ac, char *av[])
+long	*get_args_array(long *tab, char *str)
 {
-	size_t	len;
 	int		nb_nb;
+	int		i;
 
-	nb_nb = count_nb(ac, av);
-	tab = (long long *)malloc(sizeof(long long) * nb_nb);
+	nb_nb = ft_count_nb(str);
+	tab = (long *)malloc(sizeof(long) * nb_nb);
 	if (!tab)
 		return (NULL);
-	tab = put_in_tab(tab, ac, av);
+	tab = put_in_tab(tab, str);
+	i = 0;
+	while (i < nb_nb)
+	{
+		if (tab[i] > 2147483647 || tab[i] < -2147483648
+			|| is_double(tab, nb_nb))
+		{
+			write(2, "Error\n", 7);
+			exit(0);
+		}
+		i++;
+	}
 	return (tab);
 }
 
-static	int	count_nb(int ac, char *av[])
+static long	*put_in_tab(long *tab, char *str)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
-	int		res;
+	char	**to_parsed;
+	int		nb_nb;
+	int		i;
 
-	i = 1;
-	while (i < (size_t)ac)
+	nb_nb = ft_count_nb(str);
+	to_parsed = ft_split(str, ' ');
+	i = 0;
+	while (i < nb_nb)
 	{
-		j = 0;
-		len = ft_strlen(av[i]);
-		while (j < len)
-		{
-			if (av[i][j] == ' ' && j != len - 1 && j != 0)
-				res++;
-			j++;
-		}
-		res++;
+		tab[i] = ft_atoi_long(to_parsed[i]);
 		i++;
 	}
-	return (res);
+	return (tab);
 }
 
-static long long	*put_in_tab(long long *tab, int ac, char *av[])
+static int	is_double(long	*tab, int nb_nb)
 {
-	size_t	j;
-	size_t	i;
-	size_t	e;
-	int		nb_nb;
+	long	temp;
+	int		i;
+	int		j;
 
-	nb_nb = count_nb(ac, av);
-	i = 1;
-	e = 0;
-	while (i < (size_t)ac)
+	i = 0;
+	j = 0;
+	while (j < nb_nb)
 	{
-		j = 0;
-		while (j < ft_strlen(av[i]))
+		temp = tab[j];
+		i = 0;
+		while (i < nb_nb)
 		{
-			if (e >= nb_nb)
-				break ;
-			j++;
-			e++;
+			if (temp == tab[i] && i != j)
+				return (1);
+			i++;
 		}
-		i++;
+		j++;
 	}
+	return (0);
 }

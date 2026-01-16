@@ -1,5 +1,5 @@
 push_swap
-push_swap.a
+*.a
 .vscode
 a.out
 *.o

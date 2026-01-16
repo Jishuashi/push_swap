@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/10 15:20:41 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/08 13:12:16 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:35:57 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ size_t	ft_putnbr(int n);
 size_t	ft_putnbr_usigned(unsigned int nb);
 size_t	ft_print_hex(unsigned int nb, int islower);
 size_t	ft_print_addr(void *ptr);
+size_t	ft_putnbr_long(long nb);
 
 #endif

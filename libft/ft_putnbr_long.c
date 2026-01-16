@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_long.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 15:38:23 by hchartie         ###   ########.fr       */
+/*   Created: 2026/01/16 15:34:04 by hchartie          #+#    #+#             */
+/*   Updated: 2026/01/16 15:34:22 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "./libft/libft.h"
+#include "libft.h"
 
-int		check_args(int ac, char *av[]);
-size_t	*create_tab_idx(size_t i, size_t j);
-long	*get_args_array(long *tab, char *str);
-long	ft_atoi_long(const char *str);
-char	*ft_get_str_nbr(int ac, char *av[]);
-int		ft_count_nb(char *str);
+size_t	ft_putnbr_long(long nb)
+{
+	char		c;
+	size_t		res;
 
-#endif
+	res = 0;
+	if (nb > 9)
+		res += ft_putnbr((nb / 10));
+	else
+	{
+		c = (nb + 48);
+		write(1, &c, 1);
+		res = 1;
+		return (res);
+	}
+	c = (nb % 10 + 48);
+	res++;
+	write(1, &c, 1);
+	return (res);
+}
