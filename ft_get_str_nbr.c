@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 15:23:55 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 16:15:02 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:33:37 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_get_str_nbr(int ac, char *av[])
 	char	*temp;
 	size_t	i;
 
-	res = "";
+	res = ft_strdup("");
 	i = 1;
 	while (i < (size_t)ac)
 	{

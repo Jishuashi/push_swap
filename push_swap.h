@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 15:38:23 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:45:15 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int		check_args(int ac, char *av[]);
 size_t	*create_tab_idx(size_t i, size_t j);
-long	*get_args_array(long *tab, char *str);
+long	*get_args_array(long *tab, char *str, int nb_nb);
 long	ft_atoi_long(const char *str);
 char	*ft_get_str_nbr(int ac, char *av[]);
 int		ft_count_nb(char *str);

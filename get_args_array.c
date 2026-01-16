@@ -6,30 +6,28 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 16:13:04 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/16 21:47:16 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-static long	*put_in_tab(long *tab, char *str);
+static long	*put_in_tab(long *tab, char *str, int nb_nb);
 static int	is_double(long	*tab, int nb_nb);
 static void	free_all(char **tab, int len);
 
-long	*get_args_array(long *tab, char *str)
+long	*get_args_array(long *tab, char *str, int nb_nb)
 {
-	int		nb_nb;
 	int		i;
 
-	nb_nb = ft_count_nb(str);
 	tab = (long *)malloc(sizeof(long) * nb_nb);
 	if (!tab)
 	{
 		write(2, "Error\n", 7);
 		exit(0);
 	}
-	tab = put_in_tab(tab, str);
+	tab = put_in_tab(tab, str, nb_nb);
 	i = 0;
 	while (i < nb_nb)
 	{
@@ -45,13 +43,11 @@ long	*get_args_array(long *tab, char *str)
 	return (tab);
 }
 
-static long	*put_in_tab(long *tab, char *str)
+static long	*put_in_tab(long *tab, char *str, int nb_nb)
 {
 	char	**to_parsed;
-	int		nb_nb;
 	int		i;
 
-	nb_nb = ft_count_nb(str);
 	to_parsed = ft_split(str, ' ');
 	i = 0;
 	while (i < nb_nb)
