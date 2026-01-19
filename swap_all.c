@@ -6,21 +6,15 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:45:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/19 12:49:04 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:55:54 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
 char	*swap_all(long *a, long *b)
 {
-	long	temp_a;
-	long	temp_b;
-
-	temp_a = a[0];
-	a[0] = a[1];
-	a[1] = temp_a;
-
-	temp_b = b[0];
-	b[0] = b[1];
-	b[1] = temp_b;
+	swap_stack('a', a);
+	swap_stack('b', b);
 	return ("ss");
 }
