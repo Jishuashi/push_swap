@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/19 12:50:48 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/19 14:31:41 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ char	*ft_get_str_nbr(int ac, char *av[]);
 int		ft_count_nb(char *str);
 char	*swap_stack(char name, long *stack);
 char	*swap_all(long *a, long *b);
+long	*up_tab(long *stack, int nb_nb);
+long	*down_tab(long *stack, int nb_nb);
 
 #endif
