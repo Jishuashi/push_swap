@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 21:45:37 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/19 12:53:15 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@ int	main(int ac, char *av[])
 		return (1);
 	}
 	a = get_args_array(a, str, ft_count_nb(str));
+	i = 0;
+	while (i < ft_count_nb(str))
+	{
+		ft_printf("%l\n", a[i]);
+		i++;
+	}
+	ft_printf("%s\n", swap_stack('a', a));
 	i = 0;
 	while (i < ft_count_nb(str))
 	{

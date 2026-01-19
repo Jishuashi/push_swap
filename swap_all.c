@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_tab_idx.c                                   :+:      :+:    :+:   */
+/*   swap_all.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 17:31:35 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/12 17:41:34 by hchartie         ###   ########.fr       */
+/*   Created: 2026/01/19 12:45:12 by hchartie          #+#    #+#             */
+/*   Updated: 2026/01/19 12:49:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-size_t	*create_tab_idx(size_t i, size_t j)
+char	*swap_all(long *a, long *b)
 {
-	size_t	*res;
+	long	temp_a;
+	long	temp_b;
 
-	res = (size_t *)malloc(sizeof(size_t) * 2);
-	if (!res)
-		return (NULL);
-	res[0] = i;
-	res[1] = j;
-	return (res);
+	temp_a = a[0];
+	a[0] = a[1];
+	a[1] = temp_a;
+
+	temp_b = b[0];
+	b[0] = b[1];
+	b[1] = temp_b;
+	return ("ss");
 }

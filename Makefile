@@ -4,8 +4,8 @@ LIBFT = libft
 
 MAIN = push_swap.c
 
-SRCS_PS = check_args.c  create_tab_idx.c get_args_array.c ft_atoi_long.c \
-          ft_count_nb.c ft_get_str_nbr.c
+SRCS_PS = check_args.c     get_args_array.c ft_atoi_long.c ft_count_nb.c \
+          ft_get_str_nbr.c swap_stack.c     swap_all.c
 
 OBJ_PS = $(SRCS_PS:%.c=%.o)
 
@@ -32,4 +32,4 @@ fclean: clean
 re: fclean clean all 
 	$(MAKE) -C $(LIBFT) re
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re makelib
