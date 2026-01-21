@@ -6,13 +6,14 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/19 14:31:41 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 14:38:53 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "./libft/libft.h"
+# include <limits.h>
 
 int		check_args(int ac, char *av[]);
 size_t	*create_tab_idx(size_t i, size_t j);
