@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 22:42:37 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 22:49:24 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	main(int ac, char *av[])
 	a = get_args_array(a, str, nb_nb);
 	ft_prinstack(a, nb_nb);
 	down_tab(a, nb_nb);
+	ft_prinstack(a, nb_nb);
+	up_tab(a, nb_nb);
 	ft_prinstack(a, nb_nb);
 	free(a);
 	free(b);
