@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:52:29 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 23:57:59 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ static void	ft_prinstack(long *stack, int len)
 	{
 		if (stack[i] < __INT_MAX__)
 			ft_printf("%l\n", stack[i]);
-
 		else
 			ft_printf("(nill)\n");
 		i++;
