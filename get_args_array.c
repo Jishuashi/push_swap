@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/16 21:47:16 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 23:15:50 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ long	*get_args_array(long *tab, char *str, int nb_nb)
 	i = 0;
 	while (i < nb_nb)
 	{
-		if (tab[i] > 2147483647 || tab[i] < -2147483648
+		if (tab[i] > INT_MAX || tab[i] < INT_MIN
 			|| is_double(tab, nb_nb))
 		{
 			free(tab);

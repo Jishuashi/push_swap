@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 14:38:53 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 23:09:14 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ char	*swap_stack(char name, long *stack);
 char	*swap_all(long *a, long *b);
 long	*up_tab(long *stack, int nb_nb);
 long	*down_tab(long *stack, int nb_nb);
+char	*push_stack(long *stack_src, long *stack_dest, char name, int nb_nb);
 
 #endif

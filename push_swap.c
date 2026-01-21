@@ -6,13 +6,14 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 22:49:24 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 23:18:38 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static void	ft_prinstack(long *stack, int len);
+static long	*init_b(long *b, int nb_nb);
 
 int	main(int ac, char *av[])
 {
@@ -21,11 +22,11 @@ int	main(int ac, char *av[])
 	long	*a;
 	long	*b;
 
+	a = NULL;
+	b = NULL;
 	str = ft_get_str_nbr(ac, av);
 	nb_nb = ft_count_nb(str);
-	a = NULL;
-	b = (long *)malloc(sizeof(long) * nb_nb);
-	(void)b;
+	b = init_b(b, nb_nb);
 	if (!check_args(ac, av))
 	{
 		write(2, "Error\n", 7);
@@ -33,10 +34,16 @@ int	main(int ac, char *av[])
 	}
 	a = get_args_array(a, str, nb_nb);
 	ft_prinstack(a, nb_nb);
-	down_tab(a, nb_nb);
+	ft_printf("%s", push_stack(a, b, 'b', nb_nb));
+	ft_printf("A :\n");
 	ft_prinstack(a, nb_nb);
-	up_tab(a, nb_nb);
+	ft_printf("B :\n");
+	ft_prinstack(b, nb_nb);
+	ft_printf("%s", push_stack(b, a, 'a', nb_nb));
+	ft_printf("A :\n");
 	ft_prinstack(a, nb_nb);
+	ft_printf("B :\n");
+	ft_prinstack(b, nb_nb);
 	free(a);
 	free(b);
 	free(str);
@@ -54,8 +61,27 @@ static void	ft_prinstack(long *stack, int len)
 			ft_printf("%l\n", stack[i]);
 
 		else
-			ft_printf("x\n");
+			ft_printf("(nill)\n");
 		i++;
 	}
 	ft_printf("\n");
+}
+
+static long	*init_b(long *b, int nb_nb)
+{
+	int	i;
+
+	b = (long *)malloc(sizeof(long) * nb_nb);
+	if (!b)
+	{
+		write(2, "Error\n", 7);
+		exit (1);
+	}
+	i = 0;
+	while (i < nb_nb)
+	{
+		b[i] = LONG_MAX;
+		i++;
+	}
+	return (b);
 }
