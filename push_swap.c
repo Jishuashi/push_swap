@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:18:38 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/21 23:52:29 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,10 @@ int	main(int ac, char *av[])
 	}
 	a = get_args_array(a, str, nb_nb);
 	ft_prinstack(a, nb_nb);
-	ft_printf("%s", push_stack(a, b, 'b', nb_nb));
-	ft_printf("A :\n");
+	ft_printf("%s", rotate_stack(a, 'a', nb_nb));
 	ft_prinstack(a, nb_nb);
-	ft_printf("B :\n");
-	ft_prinstack(b, nb_nb);
-	ft_printf("%s", push_stack(b, a, 'a', nb_nb));
-	ft_printf("A :\n");
+	ft_printf("%s", rrotate_stack(a, 'a', nb_nb));
 	ft_prinstack(a, nb_nb);
-	ft_printf("B :\n");
-	ft_prinstack(b, nb_nb);
 	free(a);
 	free(b);
 	free(str);
