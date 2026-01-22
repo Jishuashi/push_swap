@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 23:37:05 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:55:53 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/22 12:37:46 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*rrotate_stack(long *stack, char name, int nb_nb)
 	long	temp;
 
 	i = (nb_nb - 1);
+	temp = 0;
 	while (i > 0)
 	{
 		if (i > INT_MIN && i < INT_MAX)
