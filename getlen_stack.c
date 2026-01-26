@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   up_tab.c                                           :+:      :+:    :+:   */
+/*   getlen_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/19 14:14:57 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 15:01:19 by hchartie         ###   ########.fr       */
+/*   Created: 2026/01/26 14:22:39 by hchartie          #+#    #+#             */
+/*   Updated: 2026/01/26 15:11:21 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	*up_tab(long *stack, int nb_nb)
+int	getlen_stack(long *stack, int nb_nb)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (i < nb_nb)
 	{
-		if ((i + 1) != nb_nb)
-			stack[i] = stack[(i + 1)];
+		if (stack[i] > INT_MAX)
+			break ;
 		i++;
 	}
-	stack[nb_nb - 1] = 2147483648;
-	return (stack);
+	i++;
+	return (i);
 }

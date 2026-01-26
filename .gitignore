@@ -4,3 +4,5 @@ push_swap
 a.out
 *.o
 *:Zone.Identifier
+checker_linux
+res.txt

@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 22:53:35 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:15:32 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/26 15:50:32 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ static int	is_empty(long *stack, int nb_nb)
 	{
 		if (stack[i] > INT_MIN && stack[i] < INT_MAX)
 			return (0);
+		i++;
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 12:25:09 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/26 16:45:00 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static long	*init_b(long *b, int nb_nb)
 	i = 0;
 	while (i < nb_nb)
 	{
-		b[i] = LONG_MAX;
+		b[i] = 2147483648;
 		i++;
 	}
 	return (b);
