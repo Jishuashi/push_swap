@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 12:23:04 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 12:49:26 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/26 12:51:03 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ long	*index_tab(long *stack, int nb_nb)
 		return (NULL);
 	min = LONG_MAX;
 	res = ft_index(stack, res, min, nb_nb);
+	free(stack);
 	return (res);
 }
 
