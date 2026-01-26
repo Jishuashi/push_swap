@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:51:47 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/01/26 12:23:59 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ char	*rotate_stack(long *stack, char name, int nb_nb);
 char	*rrotate_stack(long *stack, char name, int nb_nb);
 char	*rotate_all(long *stack_a, long	*stack_b, int nb_nb);
 char	*rrotate_all(long *stack_a, long *stack_b, int nb_nb);
+long	*radix_sort(long *a, long *b, int nb_nb);
+long	*index_tab(long *stack, int nb_nb);
 
 #endif
