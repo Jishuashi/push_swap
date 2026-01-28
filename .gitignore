@@ -6,3 +6,6 @@ a.out
 *:Zone.Identifier
 checker_linux
 res.txt
+checker_Mac
+test.sh
+test_push_swap

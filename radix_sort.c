@@ -26,6 +26,8 @@ long	*radix_sort(long *a, long *b, int nb_nb)
 	if (!a)
 		return (NULL);
 	max = nb_nb;
+	if (is_sorted(a, nb_nb) == 1)
+		return (a);
 	a = ft_sort(a, b, nb_nb, max);
 	return (a);
 }
@@ -68,7 +70,7 @@ static int	is_sorted(long *tab, int nb_nb)
 	i = 0;
 	while (i < nb_nb)
 	{
-		j = 0;
+		j = i;
 		while (j < nb_nb)
 		{
 			if (tab[i] > tab[j])
