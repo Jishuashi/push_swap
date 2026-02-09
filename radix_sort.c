@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 12:19:25 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 16:44:56 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/09 20:53:02 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static void	init(int *max, int *i, int *bit);
 static long	*ft_sort(long *a, long *b, int nb_nb, int max);
-static int	is_sorted(long *tab, int nb_nb);
 static int	is_empty(long *stack, int nb_nb);
 
 
@@ -59,27 +58,6 @@ static long	*ft_sort(long *a, long *b, int nb_nb, int max)
 			return (a);
 	}
 	return (a);
-}
-
-
-static int	is_sorted(long *tab, int nb_nb)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (i < nb_nb)
-	{
-		j = i;
-		while (j < nb_nb)
-		{
-			if (tab[i] > tab[j])
-				return (0);
-			j++;
-		}
-		i++;
-	}
-	return (1);
 }
 
 static void	init(int *max, int *i, int *bit)

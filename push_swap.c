@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 16:45:00 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/09 20:50:04 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,10 @@ int	main(int ac, char *av[])
 		return (1);
 	}
 	a = get_args_array(a, str, nb_nb);
-	a = radix_sort(a, b, nb_nb);
+	if (nb_nb == 5 || nb_nb <= 3)
+		a = little_nb_sort(a, b, nb_nb);
+	else
+		a = radix_sort(a, b, nb_nb);
 	free(a);
 	free(b);
 	free(str);

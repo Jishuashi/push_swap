@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/09 20:18:39 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/09 20:53:40 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ long	*radix_sort(long *a, long *b, int nb_nb);
 long	*index_tab(long *stack, int nb_nb);
 int		getlen_stack(long *stack, int nb_nb);
 void	ft_print_stacks(long *a, long *b, int nb_nb);
+long	*little_nb_sort(long *a, long *b, int nb_nb);
+int		is_sorted(long *tab, int nb_nb);
 
 #endif
