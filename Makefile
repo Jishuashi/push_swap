@@ -12,12 +12,12 @@ SRCS_PS = check_args.c		get_args_array.c	ft_atoi_long.c	ft_count_nb.c		\
 
 OBJ_PS = $(SRCS_PS:%.c=%.o)
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME) 
 
 $(NAME): makelib
-	cc $(CFLAGS) $(MAIN) $(NAME).a -o $(NAME)
+	cc $(CFLAGS) $(MAIN) $(NAME).a -g -o $(NAME)
 
 makelib: $(OBJ_PS) 
 	$(MAKE) -C $(LIBFT) all

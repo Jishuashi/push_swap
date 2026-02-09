@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 22:53:35 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 15:50:32 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/09 20:30:32 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*push_stack(long *stack_src, long *stack_dest, char name, int nb_nb)
 			return ("pb\n");
 	}
 	temp = stack_src[0];
-	up_tab(stack_src, nb_nb);
-	down_tab(stack_dest, nb_nb);
+	stack_src = up_tab(stack_src, nb_nb);
+	stack_dest = down_tab(stack_dest, nb_nb);
 	stack_dest[0] = temp;
 	if (name == 'a')
 		return ("pa\n");
