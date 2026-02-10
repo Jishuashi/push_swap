@@ -11,3 +11,4 @@ test.sh
 test_push_swap
 complexity
 *.old
+checker
