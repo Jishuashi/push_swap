@@ -1,24 +1,24 @@
-NAME = push_swap
-LIBFT_DIR   = libft
-LIBFT       = $(LIBFT_DIR)/libft.a
+NAME 		= 	push_swap
+LIBFT_DIR   = 	libft
+LIBFT       = 	$(LIBFT_DIR)/libft.a
 
-CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -g
-RM          = rm -f
+CC          = 	cc
+CFLAGS      = 	-Wall -Wextra -Werror -g
+RM          = 	rm -f
 
-MAIN = push_swap.c
-SRCS =    check_args.c		get_args_array.c	ft_atoi_long.c		ft_count_nb.c		\
-          ft_get_str_nbr.c	swap_stack.c		swap_all.c			down_tab.c			\
-		  up_tab.c			push_stack.c		rotate_stack.c		rrotate_stack.c		\
-		  rrotate_all.c		rotate_all.c		radix_sort.c		index_tab.c			\
-		  getlen_stack.c	ft_print_stack.c	little_nb_sort.c	is_sorted.c			\
+MAIN 		= 	push_swap.c
+SRCS 		=   check_args.c		get_args_array.c	ft_atoi_long.c		ft_count_nb.c		\
+        		ft_get_str_nbr.c	swap_stack.c		swap_all.c			down_tab.c			\
+				up_tab.c			push_stack.c		rotate_stack.c		rrotate_stack.c		\
+				rrotate_all.c		rotate_all.c		radix_sort.c		index_tab.c			\
+				getlen_stack.c		ft_print_stack.c	little_nb_sort.c	is_sorted.c			\
 
-OBJS        = $(SRCS:.c=.o)
+OBJS        = 	$(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS 		= 	-Wall -Wextra -Werror -g
 
-aGREEN       = \033[0;32m
-RESET       = \033[0m
+GREEN       = 	\033[0;32m
+RESET       = 	\033[0m
 
 all: $(NAME)
 
