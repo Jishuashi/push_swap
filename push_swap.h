@@ -6,12 +6,13 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:23:36 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/09 20:53:40 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 02:40:22 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+# define NULL_INT 2147483648
 # include "./libft/libft.h"
 # include <limits.h>
 

@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 12:23:04 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 15:01:42 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 02:41:03 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ long	*index_tab(long *stack, int nb_nb)
 	res = (long *)malloc(sizeof(long) * nb_nb);
 	if (!res)
 		return (NULL);
-	min = 2147483648;
+	min = NULL_INT;
 	res = ft_index(stack, res, min, nb_nb);
 	free(stack);
 	return (res);
@@ -47,8 +47,8 @@ static	long	*ft_index(long *stack, long *dest, long min, int nb_nb)
 		}
 		pos = get_pos(stack, min, nb_nb);
 		dest[pos] = i;
-		stack[pos] = 2147483648;
-		min = 2147483648;
+		stack[pos] = NULL_INT;
+		min = NULL_INT;
 		i++;
 	}
 	return (dest);

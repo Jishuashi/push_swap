@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 14:22:42 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/09 20:38:50 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 02:40:48 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ long	*down_tab(long *stack, int nb_nb)
 		}
 		i--;
 	}
-	stack[i] = 2147483648;
+	stack[i] = NULL_INT;
 	return (stack);
 }

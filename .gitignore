@@ -12,3 +12,5 @@ test_push_swap
 complexity
 *.old
 checker
+Push-Swap-Tester
+pusg_swap_tester.sh

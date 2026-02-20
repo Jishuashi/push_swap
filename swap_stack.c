@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 11:57:23 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/19 13:07:21 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/19 16:40:49 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ char	*swap_stack(char name, long *stack)
 		stack[1] = temp;
 	}
 	if (name == 'a')
-		return ("sa");
+		return ("sa\n");
 	else if (name == 'b')
-		return ("sb");
+		return ("sb\n");
 	else
 		return ("Unknow Name of stack");
 }
