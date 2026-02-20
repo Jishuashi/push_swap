@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/21 23:15:50 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 05:21:59 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ long	*get_args_array(long *tab, char *str, int nb_nb)
 	tab = (long *)malloc(sizeof(long) * nb_nb);
 	if (!tab)
 	{
-		write(2, "Error\n", 7);
-		exit(0);
+		ft_putstr_fd("Error\n", 2);
+		free(str);
+		exit(1);
 	}
 	tab = put_in_tab(tab, str, nb_nb);
 	i = 0;
@@ -35,8 +36,8 @@ long	*get_args_array(long *tab, char *str, int nb_nb)
 			|| is_double(tab, nb_nb))
 		{
 			free(tab);
-			write(2, "Error\n", 7);
-			exit(0);
+			ft_putstr_fd("Error\n", 2);
+			exit(1);
 		}
 		i++;
 	}
@@ -49,6 +50,12 @@ static long	*put_in_tab(long *tab, char *str, int nb_nb)
 	int		i;
 
 	to_parsed = ft_split(str, ' ');
+	if (!to_parsed)
+	{
+		free(tab);
+		ft_putstr_fd("Error\n", 2);
+		exit(1);
+	}
 	i = 0;
 	while (i < nb_nb)
 	{

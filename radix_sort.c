@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 12:19:25 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/09 20:53:02 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 05:12:33 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static void	init(int *max, int *i, int *bit);
 static long	*ft_sort(long *a, long *b, int nb_nb, int max);
 static int	is_empty(long *stack, int nb_nb);
-
 
 long	*radix_sort(long *a, long *b, int nb_nb)
 {

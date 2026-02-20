@@ -13,4 +13,6 @@ complexity
 *.old
 checker
 Push-Swap-Tester
-pusg_swap_tester.sh
+*.sh
+*.txt
+0
