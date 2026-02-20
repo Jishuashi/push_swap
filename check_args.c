@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 15:25:08 by hchartie          #+#    #+#             */
-/*   Updated: 2026/01/26 16:54:25 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 05:59:49 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,14 @@ int	check_args(int ac, char *av[])
 	{
 		j = 0;
 		len = ft_strlen(av[i]);
+		if (av[i][0] == '\0')
+			return (0);
 		while (j < len)
 		{
 			if (!ft_isdigit(av[i][j]) && av[i][j] != ' ' && av[i][j] != '-')
+				return (0);
+			if ((av[i][j] == '-' && !ft_isdigit(av[i][j + 1]))
+				|| (av[i][j] == '-' && av[i][j - 1] != ' ' && j != 0))
 				return (0);
 			j++;
 		}
