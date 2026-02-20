@@ -6,14 +6,14 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 20:47:02 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/20 05:23:08 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 05:33:07 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 static long	*sort_three(long *a, int nb_nb);
-static long	*sort_five(long *a, long *b, int nb_nb);
+static long	*sort_five_four(long *a, long *b, int nb_nb);
 static int	get_index_min(long *stack, int len);
 static long	*check_sort(long *a, long *b, int nb_nb);
 
@@ -39,15 +39,15 @@ static long	*check_sort(long *a, long *b, int nb_nb)
 		if (!is_sorted(a, nb_nb))
 			ft_printf("%s", rotate_stack(a, 'a', nb_nb));
 	}
-	if (nb_nb == 3)
+	else if (nb_nb == 3)
 	{
 		if (!is_sorted(a, nb_nb))
 			sort_three(a, nb_nb);
 	}
-	if (nb_nb == 5)
+	else
 	{
 		if (!is_sorted(a, nb_nb))
-			sort_five(a, b, nb_nb);
+			sort_five_four(a, b, nb_nb);
 	}
 	return (a);
 }
@@ -63,7 +63,7 @@ static long	*sort_three(long *a, int nb_nb)
 	return (a);
 }
 
-static long	*sort_five(long *a, long *b, int nb_nb)
+static long	*sort_five_four(long *a, long *b, int nb_nb)
 {
 	int	len;
 

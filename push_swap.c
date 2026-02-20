@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:18:46 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/20 05:13:50 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/20 05:31:01 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int ac, char *av[])
 	a = get_args_array(a, str, nb_nb);
 	b = init_b(b, nb_nb);
 	check_stack(str, a, b);
-	if (nb_nb == 5 || nb_nb <= 3)
+	if (nb_nb <= 5)
 		a = little_nb_sort(a, b, str, nb_nb);
 	else
 		a = radix_sort(a, b, nb_nb);
