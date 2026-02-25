@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/20 05:21:59 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/25 11:14:22 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ long	*get_args_array(long *tab, char *str, int nb_nb)
 			|| is_double(tab, nb_nb))
 		{
 			free(tab);
+			free(str);
 			ft_putstr_fd("Error\n", 2);
 			exit(1);
 		}
