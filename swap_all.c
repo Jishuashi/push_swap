@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-char	*swap_all(long *a, long *b)
+char	*swap_all(long *a, long *b, int nb_nb)
 {
-	swap_stack('a', a);
-	swap_stack('b', b);
+	swap_stack('a', a, nb_nb);
+	swap_stack('b', b, nb_nb);
 	return ("ss");
 }

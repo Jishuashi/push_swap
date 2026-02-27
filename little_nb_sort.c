@@ -59,7 +59,7 @@ static long	*sort_three(long *a, int nb_nb)
 	else if (a[1] > a[0] && a[1] > a[2])
 		ft_printf("%s", rrotate_stack(a, 'a', nb_nb));
 	if (a[0] > a[1])
-		ft_printf("%s", swap_stack('a', a));
+		ft_printf("%s", swap_stack('a', a, nb_nb));
 	return (a);
 }
 

@@ -12,13 +12,11 @@
 
 #include "push_swap.h"
 
-static int	count_element(long *stack);
-
-char	*swap_stack(char name, long *stack)
+char	*swap_stack(char name, long *stack, int nb_nb)
 {
 	long	temp;
 
-	if (count_element(stack) > 1)
+	if (nb_nb > 1)
 	{
 		temp = stack[0];
 		stack[0] = stack[1];
@@ -30,19 +28,4 @@ char	*swap_stack(char name, long *stack)
 		return ("sb\n");
 	else
 		return ("Unknow Name of stack");
-}
-
-static int	count_element(long *stack)
-{
-	int	res;
-	int	i;
-
-	i = 0;
-	res = 0;
-	while (stack[i])
-	{
-		res++;
-		i++;
-	}
-	return (res);
 }
