@@ -33,7 +33,6 @@ char	*rrotate_all(long *stack_a, long *stack_b, int nb_nb);
 long	*radix_sort(long *a, long *b, int nb_nb);
 long	*index_tab(long *stack, int nb_nb);
 int		getlen_stack(long *stack, int nb_nb);
-void	ft_print_stacks(long *a, long *b, int nb_nb);
 long	*little_nb_sort(long *a, long *b, char *str, int nb_nb);
 int		is_sorted(long *tab, int nb_nb);
 
