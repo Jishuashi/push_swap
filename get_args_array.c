@@ -6,7 +6,7 @@
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 12:50:12 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/25 11:14:22 by hchartie         ###   ########.fr       */
+/*   Updated: 2026/02/27 19:01:27 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 static long	*put_in_tab(long *tab, char *str, int nb_nb);
 static int	is_double(long	*tab, int nb_nb);
 static void	free_all(char **tab, int len);
+static	void	err(long *tab, char *str);
 
 long	*get_args_array(long *tab, char *str, int nb_nb)
 {
@@ -50,14 +51,15 @@ static long	*put_in_tab(long *tab, char *str, int nb_nb)
 	char	**to_parsed;
 	int		i;
 
+	if (is_just_space(str))
+	{
+		free(str);
+		free(tab);
+		exit(0);
+	}
 	to_parsed = ft_split(str, ' ');
 	if (!to_parsed)
-	{
-		free(tab);
-		free(str);
-		ft_putstr_fd("Error\n", 2);
-		exit(1);
-	}
+		err(tab, str);
 	i = 0;
 	while (i < nb_nb)
 	{
@@ -102,4 +104,12 @@ static void	free_all(char **tab, int len)
 		i++;
 	}
 	free(tab);
+}
+
+static	void	err(long *tab, char *str)
+{
+	free(tab);
+	free(str);
+	ft_putstr_fd("Error\n", 2);
+	exit(1);
 }

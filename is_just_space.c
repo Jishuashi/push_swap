@@ -1,41 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_args.c                                       :+:      :+:    :+:   */
+/*   is_just_space.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchartie <hchartie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/08 15:25:08 by hchartie          #+#    #+#             */
-/*   Updated: 2026/02/27 19:03:12 by hchartie         ###   ########.fr       */
+/*   Created: 2026/02/27 18:52:44 by hchartie          #+#    #+#             */
+/*   Updated: 2026/02/27 19:00:13 by hchartie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check_args(int ac, char *av[])
+int	is_just_space(char *str)
 {
-	int		i;
-	size_t	j;
-	size_t	len;
+	size_t	i;
 
-	i = 1;
-	while (i < ac)
+	i = 0;
+	while (i < ft_strlen(str))
 	{
-		j = 0;
-		len = ft_strlen(av[i]);
-		if (ac == 2 && av[1][0] == '\0')
-			exit(0);
-		if (av[i][0] == '\0')
+		if (str[i] != ' ' || str[i] == '\t')
 			return (0);
-		while (j < len)
-		{
-			if (!ft_isdigit(av[i][j]) && av[i][j] != ' ' && av[i][j] != '-')
-				return (0);
-			if ((av[i][j] == '-' && !ft_isdigit(av[i][j + 1]))
-				|| (av[i][j] == '-' && av[i][j - 1] != ' ' && j != 0))
-				return (0);
-			j++;
-		}
 		i++;
 	}
 	return (1);
