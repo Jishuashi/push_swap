@@ -54,6 +54,7 @@ static long	*put_in_tab(long *tab, char *str, int nb_nb)
 	if (!to_parsed)
 	{
 		free(tab);
+		free(str);
 		ft_putstr_fd("Error\n", 2);
 		exit(1);
 	}
